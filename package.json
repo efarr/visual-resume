@@ -1,0 +1,26 @@
+{
+  "name": "VisualResume",
+  "version": "0.0.1",
+  "description": "A data visualization makeover of the traditional resume.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/efarr/visualresume.git"
+  },
+  "author": "Eric Farr",
+  "devDependencies": {
+    "connect": "^2.14.4",
+    "connect-livereload": "^0.4.0",
+    "gulp": "^3.8.10",
+    "gulp-util": "^3.0.4",
+    "gulp-jshint": "^1.10.0",
+    "gulp-inject": "^1.0.2",
+    "gulp-livereload": "^2.1.1",
+    "gulp-load-plugins": "^0.7.1",
+    "gulp-size": "^1.1.0",
+    "jshint-stylish": "^1.0.0",
+    "opn": "^1.0.0",
+    "gulp-gh-pages": "~0.5.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-concat": "^2.5.2"
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "basics": {
+    "name": "Eric Farr",
+    "label": "Technologist and Team-Builder",
+    "picture": "",
+    "email": "eric@farrnet.com",
+    "phone": "(404) 579-1786",
+    "website": "http://ericfarr.net",
+    "summary": "Technologist and team-builder leading software organizations to build market-driven solutions and reach the highest levels of performance. Delivering Software-as-a-Service solutions at scale, specializing in HTML5, mobile, predictive analytics, Microsoft .NET, and agile methods.",
+    "location": {
+      "address": "535 Windmere Drive",
+      "postalCode": "SC  27072",
+      "city": "Lexington",
+      "countryCode": "US",
+      "region": "SC"
+    },
+    "profiles": [
+      {
+        "network": "twitter",
+        "username": "efarr",
+        "url": "http://twitter.com/efarr"
+      },
+      {
+        "network": "linkedin",
+        "username": "ericfarr",
+        "url": "http://linkedin.com/in/ericfarr"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "EagleEye Analytics",
+      "position": "VP of Engineering",
+      "website": "http://eeanalytics.com",
+      "startDate": "2014-01-06",
+      "summary": "Lead development and IT operations for leading machine learning based predictive analytics delivered to the insurance industry as a service (SaaS)",
+      "highlights": [
+        "Modernized tech stack from Silverlight, WCF, ADO.NET and TFS to HTML5, WebAPI, MVC, Entity Framework, Git, TeamCity, and Octopus Deploy.",
+        "Reduced monthly IT spend by 40%.",
+        "Reduced system errors by 75% in first six months.",
+        "More than doubled development team output.",
+        "Delivered major new release users and sales team rave about. Sales presentations moved from all PowerPoint to all software demo."
+      ],
+      "projects": [
+        {
+          "name": "Build Talon Analytics Dashboard",
+          "startDate": "2014-07-15",
+          "languages": ["C#", "JavaScript"],
+          "tools": ["D3", "HTML5", "WebAPI", "ASP.NET MVC", "Entity Framework", "Google Maps"],
+          "capacities": ["Manager", "Architect", "Developer"]
+        },
+        {
+          "name": "Maintain and Enhance Talon Analytics Workbench",
+          "languages": ["C#"],
+          "tools": ["WCF", "ASP.NET", "D3", "Entity Framework"],
+          "capacities": ["Manager"]
+        }
+      ]
+    },
+    {
+      "company": "Marathon Data Systems",
+      "position": "VP of Engineering",
+      "website": "http://marathondata.com",
+      "startDate": "2011-11-01",
+      "endDate": "2013-12-31",
+      "summary": "Led development of Web and Mobile field service automation applications delivered as a service (SaaS)",
+      "highlights": [
+        "Delivered distributed, event-based, service-oriented SaaS platform for field service automation on .NET platform with NServiceBus and RavenDB (NoSQL) to replace aging system that had scaling limits.",
+        "Led development of on/off-line iOS & Android mobile clients in HTML5.",
+        "Grew Engineering team five-fold in two years with no attrition.",
+        "Introduced Scrum and agile practices of TDD and Domain Driven Design."
+      ],
+      "projects": [
+        {
+          "name": "Replatform ServiceCEO and PestPac",
+          "startDate": "2013-01-15",
+          "languages": ["C#", "JavaScript"],
+          "tools": ["NoSQL", "ASP.NET MVC", "WebAPI", "HTML5", "NUnit", "NServiceBus", "Google Maps"],
+          "capacities": ["Manager", "Architect", "Developer"]
+        },
+        {
+          "name": "iOS and Android Client",
+          "startDate": "2012-01-01",
+          "languages": ["C#", "JavaScript"],
+          "tools": ["ASP.NET MVC", "WebAPI", "HTML5", "NoSQL", "NServiceBus", "Google Maps"],
+          "capacities": ["Architect", "Developer"]
+        },
+        {
+          "name": "Maintain and Enhance ServiceCEO",
+          "languages": ["C#"],
+          "tools": ["ASP.NET"],
+          "capacities": ["Manager"]
+        }
+      ]
+    },
+    {
+      "company": "Agentek",
+      "position": "Chief Architect",
+      "website": "http://agentek.com",
+      "startDate": "2008-10-01",
+      "endDate": "2011-09-31",
+      "summary": "Led development of Agentek’s flagship mobile workforce optimization product.",
+      "highlights": [
+        "Transitioned Engineering from waterfall development on proprietary technology to agile methods (iterative and incremental development, pair programming, continuous integration, and behavior-driven development) on .NET framework and HTML5.",
+        "Replaced custom-build approach with componentized product.",
+        "Helped sales team close deals ranging from $50k to $300k.",
+        "Led training of client IT teams in integration to our systems.",
+        "Oversaw complex integration projects."
+      ],
+      "projects": [
+        {
+          "name": "Windows Mobile Enterprise Mobility Client",
+          "languages": ["C#"],
+          "tools": ["Compact Framework", "WCF", "ASP.NET", "NHibernate", "NUnit"],
+          "startDate": "2008-10-01",
+          "endDate": "2012-01-15",
+          "capacities": ["Manager", "Architect", "Developer"]
+        },
+        {
+          "name": "HTML5 Enterprise Mobility Client",
+          "startDate": "2011-01-12",
+          "languages": ["C#", "JavaScript"],
+          "tools": ["ASP.NET MVC", "HTML5", "NHibernate", "NServiceBus", "NUnit"],
+          "capacities": ["Manager", "Architect", "Developer"]
+        }
+      ]
+    },
+    {
+      "company": "VersionOne",
+      "position": "Architect",
+      "website": "http://versionone.com",
+      "startDate": "2007-07-01",
+      "endDate": "2008-09-30",
+      "summary": "Helped build leading agile product development management solution, delivered as a service.",
+      "highlights": [
+        "Contributed as member of a high-performing software team developing the leading project planning and management tool designed specifically for agile software development.",
+        "Coded in C# 3.0, ASP.NET, DHTML, JavaScript, and AJAX with Subversion, ReSharper, and Cruise Control."
+      ],
+      "projects": [
+        {
+          "name": "VersionOne",
+          "languages": ["C#", "JavaScript"],
+          "tools": ["ASP.NET", "CruiseControl.NET", "NUnit"],
+          "capacities": ["Architect", "Developer"]
+        }
+      ]
+    },
+    {
+      "company": "OpenSpan",
+      "position": "Director of Systems Development",
+      "website": "http://openspan.com",
+      "startDate": "2006-11-01",
+      "endDate": "2007-06-30",
+      "summary": "Led development of low-level components that enabled OpenSpan software to integrate with otherwise closed applications. Reverse-engineered third party and operating system components.",
+      "highlights": [
+      ],
+      "projects": [
+        {
+          "name": "OpenSpan",
+          "languages": ["C++", "C#"],
+          "tools": ["ASP.NET"],
+          "capacities": ["Manager", "Architect", "Developer"]
+        }
+      ]
+    },
+    {
+      "company": "Alogent",
+      "position": "Development Manager",
+      "website": "http://www.profitstars.com/payment-solutions/alogent-deposit-automation-solutions",
+      "startDate": "2004-06-01",
+      "endDate": "2006-09-30",
+      "summary": "Led transition from waterfall to agile and Delphi to .NET.",
+      "highlights": [
+        "Led transition of development organization from legacy COM/DCOM, client/server development to the Microsoft .NET platform.",
+        "Bootstrapped .NET development effort (SCM strategy, continuous build, application architecture, etc.). Within a year, shipped no-touch deployed smart client, revolutionizing the corporate check-capture market."
+      ],
+      "projects": [
+        {
+          "name": "Remote Check Capture",
+          "languages": ["C#"],
+          "tools": ["ASP.NET", "NUnit"],
+          "capacities": ["Architect", "Developer", "Manager"]
+        }
+      ]
+    },
+    {
+      "company": "Clarus",
+      "position": "Architect",
+      "website": "http://www.prnewswire.com/news-releases/epicor-completes-acquisition-of-clarus-corporation-assets-77078602.html",
+      "startDate": "2000-10-01",
+      "endDate": "2004-02-28",
+      "summary": "Architecture lead for strategic sourcing product.",
+      "highlights": [
+        "Led migration of C++ based CGI application to .NET platform with Managed Extensions for C++, ASP.NET, C#, XML, and Web Services.",
+        "Architect and development lead for a Strategic Sourcing product."
+      ],
+      "projects": [
+        {
+          "name": "Strategic Sourcing",
+          "startDate": "2001-05-01",
+          "languages": ["C#", "JavaScript"],
+          "tools": ["ASP.NET"],
+          "capacities": ["Architect", "Developer"]
+        },
+        {
+          "name": "Strategic Sourcing (conversion to .NET)",
+          "endDate": "2002-01-31",
+          "languages": ["C++", "JavaScript"],
+          "tools": ["Visual C++"],
+          "capacities": ["Architect", "Developer"]
+        }
+      ]
+    },
+    {
+      "company": "SDI Consulting",
+      "position": "Consultant",
+      "website": "http://ericfarr.net",
+      "startDate": "1993-07-01",
+      "endDate": "2006-10-31",
+      "summary": "Worked as a contact programmer in various capacities for various companies.",
+      "highlights": [
+        "Developed a graphical SQL query builder, complete with SQL syntax parser (Visual C++, ActiveX/COM, ATL, VB, SQL, and Lex & Yacc).",
+        "Device driver design, development, and optimization to Diamond Multimedia, Binar Graphics, STB Systems, and IBM.",
+        "Redesigned a multi-chip, multi-OS driver architecture improving performance and reducing development time.",
+        "Developed a technique for calling real-mode BIOS interrupts from protect- mode OS/2. Involved creation of virtual-8086 session, a task switch to it, the software interrupt call, and a switch back to protect mode—all in a physical device driver."
+      ],
+      "projects": [
+        {
+          "name": "Optio: Document Processing",
+          "languages": ["C++", "Java"],
+          "tools": ["Visual C++"],
+          "startDate": "1998-07-01",
+          "endDate": "1999-03-30",
+          "capacities": ["Developer"]
+        },
+        {
+          "name": "Binar Graphics: Display Drivers for OS/2",
+          "languages": ["Assembler", "C", "C++"],
+          "tools": ["SoftICE", "Kernel Debugger"],
+          "startDate": "1993-07-01",
+          "endDate": "1996-02-28",
+          "capacities": ["Developer"]
+        },
+        {
+          "name": "STB: Display Drivers for Windows",
+          "languages": ["Assembler", "C", "C++"],
+          "tools": ["SoftICE", "Kernel Debugger"],
+          "startDate": "1996-03-01",
+          "endDate": "1997-06-30",
+          "capacities": ["Developer"]
+        },
+        {
+          "name": "ScanOptics: Medical Forms Processing System",
+          "languages": ["C++"],
+          "tools": ["Visual C++"],
+          "startDate": "1996-03-01",
+          "endDate": "1997-06-30",
+          "capacities": ["Developer"]
+        },
+        {
+          "name": "SCS",
+          "languages": ["C++"],
+          "tools": ["Visual C++"],
+          "startDate": "1997-07-01",
+          "endDate": "1998-06-30",
+          "capacities": ["Developer"]
+        },
+        {
+          "name": "ThoughtMill",
+          "languages": ["C++", "Java"],
+          "tools": ["Visual C++"],
+          "startDate": "1999-01-01",
+          "endDate": "2000-09-30",
+          "capacities": ["Developer", "Architect"]
+        },
+        {
+          "name": "Ernst & Young: International Tax Calculation Engine",
+          "languages": ["C#"],
+          "tools": ["NUnit"],
+          "startDate": "2004-03-10",
+          "endDate": "2004-05-31",
+          "capacities": ["Developer"]
+        },
+        {
+          "name": "Cox Communications",
+          "languages": ["C#"],
+          "tools": ["ASP.NET","WCF","NUnit"],
+          "startDate": "2006-10-01",
+          "endDate": "2006-10-31",
+          "capacities": ["Developer"]
+        }
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "website": "http://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description...",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Miami",
+      "area": "Industrial Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "1985-09-01",
+      "endDate": "1988-05-10",
+      "gpa": "Magna cum Laude"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Agile Software Practices",
+      "level": "Master",
+      "keywords": [
+        "Scrum",
+        "Extreme Programming",
+        "Domain-Driven Design",
+        "User Story Mapping",
+        "Lean Startup Techniques",
+        "TDD",
+        "Continuous Delivery",
+        "Automated Acceptance Testing"
+      ]
+    },
+    {
+      "name": "Object Orient Development",
+      "level": "Master",
+      "keywords": [
+        "C++",
+        "Java",
+        "C#",
+        "Design Patterns",
+        "SOLID Principles"
+      ]
+    },
+    {
+      "name": "Software as a Service",
+      "level": "Advanced",
+      "keywords": [
+        "Cloud",
+        "Messaging",
+        "REST"
+      ]
+    },
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "ASP.NET MVC",
+        "WebAPI",
+        "CSS",
+        "Javascript",
+        "AngularJS",
+        "D3"
+      ]
+    },
+    {
+      "name": "Data Science",
+      "level": "Beginner",
+      "keywords": [
+        "Data Visualization",
+        "Machine Learning",
+        "Predictive Analytics",
+        "Statistical Inference",
+        "R"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ]
+}

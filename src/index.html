@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+
+<!-- inject:js -->
+<script src="app/app.js"></script>
+<script src="app/d3-timeline.js"></script>
+<script src="app/data.js"></script>
+<script src="app/donut.js"></script>
+<script src="app/hierarchicalBar.js"></script>
+<script src="app/resume.js"></script>
+<script src="app/rolesChart.js"></script>
+<!-- endinject -->
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='//fonts.googleapis.com/css?family=Lato:400,500,600,700|Open+Sans:400,500,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/site.css">
+</head>
+
+<body itemscope ng-app="visualResume">
+
+<div class="container" ng-controller="mainController">
+    <section class="row">
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="profile-card"   ng-controller= "mainController">
+                    <div class="profile-pic">
+                        <img class="media-object img-circle center-block"
+                             src="http://www.gravatar.com/avatar/9c2f3ffa5f0138e75d73dbb34866d09b" alt="{{name}}"
+                             ng-src="http://www.gravatar.com/avatar/{{hash}}" itemprop="image">
+                    </div>
+                    <div class="contact-details">
+                        <div class="name-and-profession">
+                            <h3 class="text-bolder name" itemprop="name"> {{name}}</h3>
+                            <h5 class="text-muted" itemprop="jobTitle">{{label}}</h5>
+                        </div>
+
+                        <div class="detail">
+                              <span class="icon">
+                                <i class="fa fa-lg fa-envelope"></i>
+                              </span>
+
+                              <span class="info">
+                                <a href="mailto:{{email}}" class="link-disguise" itemprop="email">{{email}}</a>
+                              </span>
+                        </div>
+                        <div class="detail">
+                          <span class="icon">
+                            <i class="fa fa-lg fa-phone"></i>
+                          </span>
+
+                            <a href="tel://{{phone}}" class="link-disguise info" itemprop="telephone">
+                                {{phone}}
+                            </a>
+                        </div>
+                        <div class="detail">
+                      <span class="icon">
+                        <i class="fa fa-lg fa-map-marker"></i>
+                      </span>
+
+                        <span class="info">
+                          {{location.city}}, {{location.region}},
+                          {{location.countryCode}}
+                        </span>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+
+                <div class="social-links">
+                    <a class="social-link" href="{{website}}" target="_blank">
+                        <span class="fa fa-rss fa-1x"></span>
+                        <span class="social-link-text">{{website}}</span>
+                        <span>&nbsp;&nbsp;</span>
+                    </a>
+                    <span ng-repeat="network in socialNetworks">
+                    <a class="social-link" href="{{network.url}}" target="_blank">
+                        <span class="fa fa-{{network.network}} fa-1x"></span>
+                        <span class="social-link-text">{{network.url}}</span>
+                        <span>&nbsp;&nbsp;</span>
+                    </a>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="row">
+        <div class="card-wrapper">
+            <div class="card background-card">
+
+                <h4 id="about"> <span class="fa fa-lg fa-user"></span> <span class="title">About</span> </h4>
+                <div class="card-nested" itemprop="description">
+                    <p> {{resume.basics.summary}} </p>
+                </div>
+
+                <h4 id="work-experience"> <span class="fa fa-lg fa-pencil-square-o"></span> <span class="title">Work Experience</span> </h4>
+
+                <roles-chart></roles-chart>
+
+                <hr/>
+
+                <ul class="list-unstyled">
+                    <li class="card-nested" ng-repeat="job in resume.work">
+                        <div class="content has-sidebar row">
+                            <div class="col-md-8">
+                                <p class="clear-margin-sm">
+                                    <strong>{{job.position}}</strong>,
+                                    <a ng-show="job.website" href="{{job.website}}" target="_blank">{{job.company}}</a>
+                                    <span ng-hide="job.website">{{job.company}}</span>
+                                </p>
+                                <p class="text-muted">
+                                    <small>
+                                        <span class="space-right"> {{job.prettyStart}} - {{job.prettyEnd}}</span>
+                                        <span ng-show="job.duration"> <i class="fa fa-clock-o icon-left"></i> {{job.duration}} </span>
+                                    </small>
+                                </p>
+                                <p>{{job.summary}}</p>
+                                <ul>
+                                    <li ng-repeat="highlight in job.highlights">{{highlight}}</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <donut langdata=job.total.languages tooldata=job.total.tools jobnumber=$index></donut>
+                            </div>
+                        </div>
+                        <hr/>
+                    </li>
+                </ul>
+
+                <h4 id="skills"> <span class="fa fa-lg fa-code"></span> <span class="title">Skills</span> </h4>
+                <ul class="list-unstyled">
+                    <li ng-repeat="skill in resume.skills" class="card-nested skill {{skill.skill_class}}">
+                        <strong>{{skill.name}} ({{skill.skill_class}}):</strong>
+                        <span ng-repeat="keyword in skill.keywords" class="enumeration">{{keyword}}</span>
+                    </li>
+                </ul>
+
+                <h4 id="languages"> <span class="title">Languages</span> </h4>
+                <div id="languageChart">
+                    <div id="pop-up">
+                        <div id="pop-up-title"></div>
+                        <div id="pop-up-content">
+                            <ul id="pop-up-list"></ul>
+                        </div>
+                    </div>
+                    <fieldset class="filterOptions">
+                        <legend>Roles</legend>
+                        <input class="filterButtonLanguage" name="Manager" type="checkbox" checked>Manager</input><br>
+                        <input class="filterButtonLanguage" name="Architect" type="checkbox" checked>Architect</input><br>
+                        <input class="filterButtonLanguage" name="Developer" type="checkbox" checked>Developer</input><br>
+                    </fieldset>
+                </div>
+                <hierarchical-bar datasource='languages'></hierarchical-bar>
+
+                <h4 id="tools"> <span class="title">Tools</span> </h4>
+                <div id="toolChart">
+                    <fieldset class="filterOptions">
+                        <legend>Roles</legend>
+                        <input class="filterButtonTool" name="Manager" type="checkbox" checked>Manager</input><br>
+                        <input class="filterButtonTool" name="Architect" type="checkbox" checked>Architect</input><br>
+                        <input class="filterButtonTool" name="Developer" type="checkbox" checked>Developer</input><br>
+                    </fieldset>
+                </div>
+                <hierarchical-bar datasource='tools'></hierarchical-bar>
+
+                <h4 id="education"><span class="fa fa-lg fa-mortar-board"></span> <span class="title">Education</span></h4>
+
+                <ul class="list-unstyled">
+                    <li class="card-nested" ng-repeat="school in resume.education" >
+                        <div class="content has-sidebar">
+                            <p class="clear-margin-sm">
+                                <strong>{{school.area}}, {{school.studyType}}</strong>,&nbsp;
+                                {{school.institution}}
+                            </p>
+                            <p class="text-muted">
+                                <small>
+                                    {{school.startDate}} - {{school.endDate}}
+                                </small>
+                            </p>
+                            <i>{{school.gpa}}</i>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>Powered by open-sourced <a href="https://github.com/efarr/visual-resume">visual-resume</a>, created by <a href="http://ericfarr.net/">Eric Farr.</a></footer>
+
+</div>
+</body>
