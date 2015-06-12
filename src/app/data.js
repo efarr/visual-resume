@@ -310,6 +310,10 @@ var data = function() {
         d3.json("sample-resume.json", parseData);
     };
 
+    var reloadData = function(url) {
+        d3.json(url, parseData);
+    }
+
     var whenDataLoaded = function(callback) {
         if (data.isLoaded) {
             callback();
@@ -339,6 +343,7 @@ var data = function() {
         isLoaded: false,
         reloadLanguageData: reloadLanguageData,
         reloadToolData: reloadToolData,
+        reloadData: reloadData,
         whenDataLoaded: whenDataLoaded
     };
 }();

@@ -32,7 +32,7 @@
     <section class="row">
         <div class="card-wrapper">
             <div class="card">
-                <div class="profile-card"   ng-controller= "mainController">
+                <div class="profile-card">
                     <div class="profile-pic">
                         <img class="media-object img-circle center-block"
                              src="http://www.gravatar.com/avatar/9c2f3ffa5f0138e75d73dbb34866d09b" alt="{{name}}"
@@ -197,7 +197,10 @@
         </div>
     </section>
 
-    <footer>Powered by open-sourced <a href="https://github.com/efarr/visual-resume">visual-resume</a>, created by <a href="http://ericfarr.net/">Eric Farr.</a></footer>
+    <footer>
+        Powered by open-sourced <a href="https://github.com/efarr/visual-resume">visual-resume</a>, created by <a href="http://ericfarr.net/">Eric Farr.</a>
+        Load your JSON Resume: <input type="text" ng-model="resumeURL" ng-keypress="keyPress($event)" placeholder="URL to Specially Annotated JSON Resume"/>
+    </footer>
 
 </div>
 </body>

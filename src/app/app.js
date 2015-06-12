@@ -14,6 +14,13 @@ visualResume.controller('mainController', function($scope){
         }
     };
 
+    $scope.keyPress = function(key) {
+        if (key.which === 13) {
+            data.reloadData($scope.resumeURL);
+        }
+    };
+
+
     data.whenDataLoaded(function() {
 
         var basics = data.resume.basics;
