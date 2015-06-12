@@ -312,7 +312,7 @@ var data = function() {
 
     var reloadData = function(url) {
         d3.json(url, parseData);
-    }
+    };
 
     var whenDataLoaded = function(callback) {
         if (data.isLoaded) {
